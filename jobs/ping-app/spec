@@ -1,0 +1,22 @@
+---
+name: ping-app
+
+templates:
+  pinger_ctl.erb: bin/pinger_ctl
+
+
+packages: [ping-app]
+
+provides:
+- name: pinger
+  type: pinger
+
+consumes:
+- name: pinger
+  type: pinger
+
+properties:
+  port:
+    default: 8080
+  ping_interval:
+    default: 10

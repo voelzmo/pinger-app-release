@@ -1,1 +1,12 @@
 set -e
+set -u
+
+export GOROOT=$(readlink -nf /var/vcap/packages/golang)
+export GOPATH=$PWD
+export PATH=$GOROOT/bin:$PATH
+
+mkdir ../src && cp -a * ../src/ && mv ../src ./src
+
+mkdir $BOSH_INSTALL_TARGET/bin
+
+go build -o $BOSH_INSTALL_TARGET/bin/pinger src/github.com/voelzmo/pinger/main.go

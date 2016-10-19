@@ -1,0 +1,5 @@
+check process ping-app
+  with pidfile /var/vcap/sys/run/ping-app/pid
+  start program "/var/vcap/jobs/ping-app/bin/pinger_ctl start"
+  stop program "/var/vcap/jobs/ping-app/bin/pinger_ctl stop"
+  group vcap
