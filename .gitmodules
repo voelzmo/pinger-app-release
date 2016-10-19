@@ -1,0 +1,3 @@
+[submodule "src/ping-app"]
+	path = src/ping-app
+	url = https://github.com/voelzmo/pinger.git

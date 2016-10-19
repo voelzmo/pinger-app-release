@@ -1,0 +1,6 @@
+---
+name: ping-app
+
+dependencies: []
+
+files: [ping-app/**/*]
