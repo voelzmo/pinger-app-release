@@ -1,0 +1,29 @@
+azs:
+- name: z1
+
+vm_types:
+- name: default
+  cloud_properties:
+    ram: 2048
+    disk: 8192
+    cpu: 2
+
+disk_types:
+- name: default
+  disk_size: 3000
+
+networks:
+- name: default
+  subnets:
+  - range: 10.244.0.0/24
+    dns:
+      - 8.8.8.8
+    gateway: 10.244.0.1
+    static: [10.244.0.100]
+    cloud_properties: {}
+
+compilation:
+  workers: 5
+  reuse_compilation_vms: true
+  vm_type: default
+  network: default
