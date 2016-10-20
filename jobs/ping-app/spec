@@ -5,7 +5,9 @@ templates:
   pinger_ctl.erb: bin/pinger_ctl
 
 
-packages: [ping-app]
+packages:
+- ping-app
+- common
 
 provides:
 - name: pinger

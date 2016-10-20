@@ -4,9 +4,13 @@ RUN_DIR=/var/vcap/sys/run/pinger
 LOG_DIR=/var/vcap/sys/log/pinger
 PIDFILE=${RUN_DIR}/pid
 
+source /var/vcap/packages/common/utils.sh
+
 case $1 in
 
   start)
+    pid_guard $PIDFILE "ping-app"
+
     mkdir -p $RUN_DIR $LOG_DIR
     chown -R vcap:vcap $RUN_DIR $LOG_DIR
 
@@ -23,8 +27,7 @@ case $1 in
     ;;
 
   stop)
-    kill -9 `cat $PIDFILE`
-    rm -f $PIDFILE
+    kill_and_wait $PIDFILE
 
     ;;
 
