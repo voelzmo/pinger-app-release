@@ -15,10 +15,10 @@ case $1 in
     exec /var/vcap/packages/ping-app/bin/pinger \
     --listenPort <%= p('port') %> \
     --interval <%= p('ping_interval') %> \
-    <% pinger_addresses = link('pinger').instances.map(&:address) %>
-    <% (pinger_addresses - spec.address).each do |address| %>
-    --address <%= address %>
-    <% end %>
+    <% pinger_addresses = link('pinger').instances.map(&:address) -%>
+    <% (pinger_addresses - [spec.address]).each do |address| -%>
+    --address <%= address %>:<%= p('port') %> \
+    <% end -%>
 
     ;;
 
