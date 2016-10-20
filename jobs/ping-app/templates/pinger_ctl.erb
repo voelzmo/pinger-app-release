@@ -23,6 +23,8 @@ case $1 in
     <% (pinger_addresses - [spec.address]).each do |address| -%>
     --address <%= address %>:<%= p('port') %> \
     <% end -%>
+    1>>$LOG_DIR/stdout.log \
+    2>>$LOG_DIR/stderr.log
 
     ;;
 
