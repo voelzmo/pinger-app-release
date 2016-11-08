@@ -13,11 +13,12 @@ stemcells:
 
 instance_groups:
 - name: ping-app
-  instances: 5
+  instances: 3
   jobs:
     - name: ping-app
       properties:
         port: 8081
+        ping_interval: 60
   vm_type: default
   stemcell: default
   networks:
