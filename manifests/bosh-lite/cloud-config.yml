@@ -7,10 +7,17 @@ vm_types:
     ram: 2048
     disk: 8192
     cpu: 2
+- name: big
+  cloud_properties:
+    ram: 8192
+    disk: 8192
+    cpu: 4
 
 disk_types:
 - name: default
-  disk_size: 3000
+  disk_size: 4_096
+- name: big
+  disk_size: 40_960
 
 networks:
 - name: default
@@ -19,7 +26,7 @@ networks:
     dns:
       - 8.8.8.8
     gateway: 10.244.0.1
-    static: [10.244.0.100]
+    static: [10.244.0.100,10.244.0.101,10.244.0.102]
     cloud_properties: {}
 
 compilation:
