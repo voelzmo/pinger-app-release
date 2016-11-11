@@ -1,6 +1,5 @@
 ---
 name: ping-app
-director_uuid: fb70f16a-4d6f-41f8-bc2e-0181a03dff18
 
 releases:
   - name: ping-app
@@ -14,6 +13,7 @@ stemcells:
 instance_groups:
 - name: ping-app
   instances: 3
+  azs: [z1]
   jobs:
     - name: ping-app
       properties:
@@ -22,7 +22,7 @@ instance_groups:
   vm_type: default
   stemcell: default
   networks:
-  - name: default
+    - name: default
 
 update:
   canaries: 0
