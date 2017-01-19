@@ -22,3 +22,5 @@ properties:
     default: 8080
   ping_interval:
     default: 10
+  error_rate:
+    default: 0.0
