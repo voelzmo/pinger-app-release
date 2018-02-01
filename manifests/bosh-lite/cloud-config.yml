@@ -23,6 +23,7 @@ networks:
 - name: default
   subnets:
   - range: 10.244.0.0/24
+    azs: [z1]
     dns:
       - 8.8.8.8
     gateway: 10.244.0.1
@@ -31,6 +32,7 @@ networks:
 
 compilation:
   workers: 5
+  az: z1
   reuse_compilation_vms: true
   vm_type: default
   network: default
