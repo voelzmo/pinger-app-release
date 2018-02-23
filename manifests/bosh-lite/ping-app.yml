@@ -1,9 +1,20 @@
 ---
 name: ping-app
 
+addons:
+- name: bpm
+  jobs:
+    - name: bpm
+      release: bpm
+
 releases:
   - name: ping-app
-    version: latest
+    version: create
+    url: file:///Users/d058546/workspace/ping-app-release
+  - name: bpm
+    version: 0.3.0
+    url: https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=0.3.0
+    sha1: e2a86f05578257d2827a7face5531b9529fd46a5
 
 stemcells:
 - alias: default
@@ -12,6 +23,7 @@ stemcells:
 
 instance_groups:
 - name: ping-app
+  release: ping-app
   instances: 3
   azs: [z1]
   jobs:

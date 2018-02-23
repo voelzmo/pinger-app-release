@@ -2,12 +2,11 @@
 name: ping-app
 
 templates:
-  pinger_ctl.erb: bin/pinger_ctl
+  bpm.yml.erb: config/bpm.yml
 
 
 packages:
 - ping-app
-- common
 
 provides:
 - name: pinger

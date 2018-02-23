@@ -1,0 +1,15 @@
+<% 
+regular_args = ["--listenPort", p('port'), "--interval", p('ping_interval'), "--error-rate", p('error_rate')]
+address_args = []
+pinger_addresses = link('pinger').instances.map(&:address)
+  (pinger_addresses - [spec.address]).each do |address|
+    address_args << "--address"
+    address_args << address+":"+p('port').to_s
+end
+regular_args.concat(address_args)
+-%>
+processes:
+  - name: ping-app
+    executable: /var/vcap/packages/ping-app/bin/pinger
+    args: <%= regular_args %>
+    
