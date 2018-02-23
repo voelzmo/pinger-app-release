@@ -1,5 +1,5 @@
 check process ping-app
   with pidfile /var/vcap/sys/run/bpm/ping-app/ping-app.pid
   start program "/var/vcap/jobs/bpm/bin/bpm start ping-app"
-  stop program "/var/vcap/jobs/bpm/bin/bpm start ping-app"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop ping-app"
   group vcap
