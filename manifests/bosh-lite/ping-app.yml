@@ -11,10 +11,10 @@ releases:
   - name: ping-app
     version: create
     url: file:///Users/d058546/workspace/ping-app-release
-  - name: bpm
-    version: 0.3.0
-    url: https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=0.3.0
-    sha1: e2a86f05578257d2827a7face5531b9529fd46a5
+  - name: "bpm"
+    version: "0.10.0"
+    url: "https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=0.10.0"
+    sha1: "f6140862d763ba397e7d8675fbb56020d4148081"
 
 stemcells:
 - alias: default
