@@ -12,13 +12,13 @@ releases:
     version: create
     url: file:///Users/d058546/workspace/ping-app-release
   - name: "bpm"
-    version: "0.10.0"
-    url: "https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=0.10.0"
-    sha1: "f6140862d763ba397e7d8675fbb56020d4148081"
+    version: "1.0.0"
+    url: "https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=1.0.0"
+    sha1: "42b95d4a0d6d15dd0b0ead62418ffb56208e2307"
 
 stemcells:
 - alias: default
-  os: ubuntu-trusty
+  os: ubuntu-xenial
   version: latest
 
 instance_groups:
