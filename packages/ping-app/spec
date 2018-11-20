@@ -1,6 +1,6 @@
 ---
 name: ping-app
 
-dependencies: [golang]
+dependencies: [golang-1.11.2]
 
 files: [github.com/voelzmo/pinger/**/*.go]
