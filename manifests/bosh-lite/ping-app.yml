@@ -10,7 +10,7 @@ addons:
 releases:
   - name: ping-app
     version: create
-    url: file:///Users/d058546/workspace/ping-app-release
+    url: file:///Users/d058546/workspace/pinger-app-release
   - name: "bpm"
     version: "1.0.0"
     url: "https://bosh.io/d/github.com/cloudfoundry-incubator/bpm-release?v=1.0.0"
