@@ -1,5 +1,5 @@
 ---
-name: golang-1.11.2
+name: golang
 
 dependencies: []
 
